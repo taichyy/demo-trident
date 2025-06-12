@@ -1,7 +1,5 @@
 'use client'
-
 import { useState } from 'react'
-import Image from 'next/image'
 
 const sections = [
     { id: 'feature', label: '白頭翁的特性' },
