@@ -22,5 +22,118 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.donut-mask {
+  -webkit-mask-image: radial-gradient(circle at center, transparent 30%, black 31%);
+  mask-image: radial-gradient(circle at center, transparent 30%, black 31%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.logo {
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+  left: 100%;
+  top: 90px;
+  
+  z-index: 3;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 100%;
+  box-shadow: 1px 1px 3px rgba(51, 51, 102, 0.5);
+  
+  transform: translate(-50%, -50%);
+}
+
+.bird_body {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  
+  background-color: rgba(0, 0, 0, 25);
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 6px;
+  
+  transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.bird_head {
+  position: absolute;
+
+  top: 49%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  
+  background-color: white;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+
+  transform: translate(-50%, -50%) rotate(35deg);
+}
+
+.bird_eye {
+  position: absolute;
+
+  top: 51%;
+  left: 64%;
+  width: 9.6px;
+  height: 9.6px;
+
+  background-color: rgba(0, 0, 0, 25);
+  border-radius: 100%;
+
+  transform: translate(-50%, -50%);
+}
+
+.bird_mouth {
+  position: absolute;
+
+  top: 40%;
+  left: 80%;
+  width: 12px;
+  height: 8px;
+
+  background-color: rgba(0, 0, 0, 25);
+  border-top-right-radius: 100%;
+  transform: rotate(-10deg) ;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 60px;
+    height: 60px;
+    top: 80px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    position: relative;
+    display: inline-block;
+  }
+
+  .bird_body,
+  .bird_head {
+    width: 35px;
+    height: 35px;
+  }
+
+  .bird_eye {
+    width: 7px;
+    height: 7px;
+  }
+
+  .bird_mouth {
+    width: 10px;
+    height: 6px;
+  }
+  
 }
